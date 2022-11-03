@@ -1,5 +1,6 @@
 public class Main {
     static ListElement listHead = null;
+    static ListElement listTail = null;
 
     public static void main(String[] args) {
         append('基');
@@ -26,6 +27,8 @@ public class Main {
                 prev = prev.next;
             }
             prev.next = curr;
+            curr.prev = prev;
         }
+        listTail = curr;
     }
 }
